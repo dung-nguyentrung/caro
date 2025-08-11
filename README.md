@@ -1,0 +1,53 @@
+# Game Caro (Cờ Ca-rô)
+
+## Mô tả
+Game Caro là trò chơi cờ ca-rô kinh điển dành cho 2 người chơi. Mục tiêu là tạo ra một hàng liên tiếp gồm 5 quân cờ cùng loại theo hàng ngang, dọc hoặc chéo để chiến thắng.
+
+## Tính năng
+- Chơi dành cho 2 người trên cùng một máy
+- Giao diện đơn giản, dễ sử dụng
+- Hiển thị người chơi hiện tại
+- Kiểm tra thắng thua tự động
+- Cho phép khởi động lại ván chơi bất cứ lúc nào
+
+## Công nghệ sử dụng
+- Frontend: React / Vue / Angular / HTML + CSS + JavaScript (chọn theo dự án của bạn)
+- Quản lý trạng thái và logic game
+- Thiết kế responsive, chạy tốt trên nhiều thiết bị
+
+## Cách chơi
+1. Người chơi X đi trước, sau đó đến người chơi O.
+2. Mỗi lượt, người chơi chọn một ô trống để đặt quân cờ của mình.
+3. Ai tạo được hàng 5 quân liên tiếp trước sẽ thắng.
+4. Nếu bàn cờ đầy mà không có người thắng thì hòa.
+
+## Hướng dẫn chạy game
+1. Clone hoặc tải source code về máy:
+    ```bash
+    git clone https://github.com/username/game-caro.git
+    ```
+2. Cài đặt các thư viện cần thiết (nếu dùng Node.js):
+    ```bash
+    npm install
+    ```
+3. Khởi chạy ứng dụng:
+    ```bash
+    npm start
+    ```
+4. Mở trình duyệt và truy cập `http://localhost:3000` để chơi.
+
+## Cấu trúc dự án
+- `src/` - mã nguồn chính của game
+- `public/` - tài nguyên tĩnh (ảnh, icon, v.v)
+- `README.md` - tài liệu dự án
+
+## Đóng góp
+Mọi đóng góp và góp ý vui lòng tạo issue hoặc pull request trên GitHub.
+
+## Giấy phép
+Dự án này được cấp phép dưới giấy phép MIT.
+
+---
+
+Chúc bạn chơi game vui vẻ! 🎉
+
