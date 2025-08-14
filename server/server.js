@@ -1,15 +1,17 @@
-// server/server.js
+require('dotenv').config();
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
 const cors = require('cors');
 
+
 const app = express();
 app.use(cors());
 const server = http.createServer(app);
+
 const io = new Server(server, {
     cors: {
-        origin: "http://10.30.148.52:3000",
+        origin: process.env.NEXT_PUBLIC_CLIENT_URL,
         methods: ["GET", "POST"]
     }
 });
@@ -103,6 +105,19 @@ io.on('connection', (socket) => {
             row, col, player: socket.role, currentPlayer: room.currentPlayer
         });
     });
+
+    // Xử lý chat
+    socket.on('send-message', (message, roomId) => {
+        const sender = socket.role === 'X' ? 'Người chơi X' : 'Người chơi O';
+        const chatMessage = {
+            sender,
+            text: message,
+            timestamp: new Date()
+        };
+
+        io.to(roomId).emit('chat-message', chatMessage);
+    });
+
 
     // Thay thế toàn bộ phần reset-game bằng đoạn code này
     socket.on('reset-game', (roomId) => {
