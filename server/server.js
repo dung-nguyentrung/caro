@@ -167,18 +167,6 @@ io.on('connection', (socket) => {
         });
     });
 
-    // Xử lý chat
-    socket.on('send-message', (message, roomId) => {
-        const sender = socket.role === 'X' ? 'Người chơi X' : 'Người chơi O';
-        const chatMessage = {
-            sender,
-            text: message,
-            timestamp: new Date()
-        };
-
-        io.to(roomId).emit('chat-message', chatMessage);
-    });
-
     // Chơi lại
     socket.on('reset-game', (roomId) => {
         if (!rooms[roomId]) return;
