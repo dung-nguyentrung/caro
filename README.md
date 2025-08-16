@@ -1,4 +1,4 @@
-# Game Caro (Cờ Ca-rô)
+# Game Caro 
 
 ## Mô tả
 
@@ -6,17 +6,11 @@ Game Caro là trò chơi cờ ca-rô kinh điển dành cho 2 người chơi. M�
 
 ## Tính năng
 
-- Chơi dành cho 2 người trên cùng một máy
+- Chơi dành cho 2 người chơi
 - Giao diện đơn giản, dễ sử dụng
 - Hiển thị người chơi hiện tại
 - Kiểm tra thắng thua tự động
 - Cho phép khởi động lại ván chơi bất cứ lúc nào
-
-## Công nghệ sử dụng
-
-- Frontend: React / Vue / Angular / HTML + CSS + JavaScript (chọn theo dự án của bạn)
-- Quản lý trạng thái và logic game
-- Thiết kế responsive, chạy tốt trên nhiều thiết bị
 
 ## Cách chơi
 
